@@ -17,4 +17,4 @@ git add -A
 git commit -m 'Deploy files'
 
 # push files
- git push -f git@github.com:JChouCode/jchou-blog.git master:gh-pages
+ git push -f git@github.com:JChouCode/jchou-web.git master:gh-pages
