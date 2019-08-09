@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ReactDom from 'react-dom';
 import { Root, Routes, addPrefetchExcludes } from 'react-static'
-//
-import { Link, Router } from 'components/Router'
+import { Router, Match } from '@reach/router'
 import Dynamic from 'containers/Dynamic'
-
+import Header from 'components/Header'
 import './app.css'
+import { ScrollToTop } from "components/ScrollToTop"
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])
@@ -12,22 +13,21 @@ addPrefetchExcludes(['dynamic'])
 function App() {
   return (
     <Root>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/dynamic">Dynamic</Link>
-      </nav>
+      <Header></Header>
       <div className="content">
         <React.Suspense fallback={<em>Loading...</em>}>
-          <Router>
-            <Dynamic path="dynamic" />
-            <Routes path="*" />
+          <Router primary={false}>
+            <ScrollToTop path="/">
+              <Dynamic path="dynamic" />
+              <Routes path="*" />
+            </ScrollToTop>
           </Router>
         </React.Suspense>
       </div>
-    </Root>
+    </Root >
   )
 }
+
+
 
 export default App

@@ -3,35 +3,345 @@
 }
 
 body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+  font-family: 'Graphik', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
   font-size: 16px;
   margin: 0;
   padding: 0;
+  /* overflow: scroll; */
 }
 
-a {
+.post {
+  position: relative;
+  display: block;
   text-decoration: none;
-  color: #108db8;
-  font-weight: bold;
+  color: black;
+  z-index: 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  left: 85%;
+  top: 2.1em;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  opacity: 1;
+}
+
+.back svg {
+  margin-left: 0.5em;
+  height: 1em;
+  width: 1em;
+  transition: 0.5s width ease-out;
+  overflow: visible;
+}
+
+.back:hover svg {
+  width: 1.5em;
+}
+
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding-top: 5em;
+  font-weight: 300;
+  line-height: 1.7em;
+
+}
+
+.container p {
+  width: 60em;
+  white-space: normal;
+}
+
+.row {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  margin-top: 5em;
+  justify-content: space-around;
+  font-size: 18px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.row a {
+  text-decoration: none;
+  text-align: left;
+  color: black;
+}
+
+ul {
+  list-style-image: url("./assets/dash.svg")
+}
+
+p {
+  white-space: pre;
+}
+
+a p span {
+  background: yellow;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.index {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.index h1 {
+  margin-top: -1em;
+  font-size: 2.5em;
+}
+
+.index p span {
+  font-weight: 300;
+}
+
+.index p {
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+.index img {
+  width: 320px;
+  height: 239px;
+  margin: auto;
+  margin-top: 7em;
+  display: block;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  z-index: 100;
+  align-content: center;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#nav-right {
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+#nav-right a svg {
+  width: 1.5em;
+  height: 1.4em;
+  margin-right: 1em;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  margin-left: 2em;
+  display: flex;
+  width: 18em;
+  justify-content: space-between;
+
+}
+
+nav a {
+  color: #b3b3b3;
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: black;
+}
+
+.logo {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.logo img {
+  width: 92px;
+  height: 69px;
+}
+
+.logo h1 {
+  margin-left: -1px;
+  font-size: 18px;
+  line-height: 1em;
 }
 
 img {
   max-width: 100%;
 }
 
-nav {
-  width: 100%;
-  background: #108db8;
-}
-
-nav a {
-  color: white;
-  padding: 1rem;
-  display: inline-block;
-}
-
 .content {
   padding: 1rem;
+}
+
+.footer {
+  margin-top: 8em;
+  color: gray;
+}
+
+.footer p {
+  font-size: 17px;
+}
+
+.footer a {
+  color: black;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-Extralight.woff2') format('woff2'),
+    url('fonts/Graphik-Extralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-LightItalic.woff2') format('woff2'),
+    url('fonts/Graphik-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-Medium.woff2') format('woff2'),
+    url('fonts/Graphik-Medium.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-Thin.woff2') format('woff2'),
+    url('fonts/Graphik-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-Light.woff2') format('woff2'),
+    url('fonts/Graphik-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-ExtralightItalic.woff2') format('woff2'),
+    url('fonts/Graphik-ExtralightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-ThinItalic.woff2') format('woff2'),
+    url('fonts/Graphik-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-MediumItalic.woff2') format('woff2'),
+    url('fonts/Graphik-MediumItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-Semibold.woff2') format('woff2'),
+    url('fonts/Graphik-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-SemiboldItalic.woff2') format('woff2'),
+    url('fonts/Graphik-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-Regular.woff2') format('woff2'),
+    url('fonts/Graphik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('fonts/Graphik-RegularItalic.woff2') format('woff2'),
+    url('fonts/Graphik-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 880px) {
+  nav {
+    display: none;
+  }
+
+  .index {
+    height: 2vh;
+  }
+
+  .index img {
+    width: 219px;
+    height: 168px;
+  }
+
+  .index h1 {
+    margin-top: 0.05em;
+  }
+
+  p {
+    white-space: normal;
+  }
+
+  p br {
+    display: none;
+  }
+
+  .row {
+    display: block;
+    width: 100%;
+  }
+
+  .container p {
+    width: 80%
+  }
+
+
 }

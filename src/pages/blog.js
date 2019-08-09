@@ -1,30 +1,29 @@
 import React from 'react'
-import { useRouteData } from 'react-static'
-//
-import { Link } from 'components/Router'
+import { Link, Router } from 'components/Router'
+import { useRouteData } from "react-static"
 
-export default function Blog() {
-  const { posts } = useRouteData()
+const ReactMarkdown = require("react-markdown");
+
+
+
+export default () => {
+  const { posts } = useRouteData();
   return (
-    <div>
-      <h1>It's blog time.</h1>
-      <div>
-        <a href="#bottom" id="top">
-          Scroll to bottom!
-        </a>
-      </div>
-      <br />
-      All Posts:
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
-            <Link to={`/blog/post/${post.id}/`}>{post.title}</Link>
-          </li>
+    <div className="container">
+      <h2>Blogs</h2>
+      {
+        posts.map(post => (
+          <Link key={post.id} to={`/blog/${post.id}`} className="post">
+            <div>
+              <h3>{post.title}</h3>
+              <ReactMarkdown
+                source={post.content}
+                escapeHtml={false}
+              />
+            </div>
+          </Link>
         ))}
-      </ul>
-      <a href="#top" id="bottom">
-        Scroll to top!
-      </a>
     </div>
-  )
+  );
 }
+

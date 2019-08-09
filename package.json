@@ -11,8 +11,11 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "axios": "^0.18.0",
+    "graphql-request": "^1.8.2",
+    "history": "^4.9.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-markdown": "^4.1.0",
     "react-static": "^7.0.0",
     "react-static-plugin-reach-router": "^7.0.0",
     "react-static-plugin-sitemap": "^7.0.0",
