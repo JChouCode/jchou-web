@@ -10,9 +10,9 @@ export default () => (
     </p>
     <ul>
       <li>
-        <a href="https://github.com">Github</a>
+        <a href="https://github.com/JChouCode">Github</a>
       </li>
-      <li><a href="https://github.com">LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/in/jeffreychoucu/">LinkedIn</a></li>
       <li><a href="https://github.com">Download Resume</a></li>
 
     </ul>

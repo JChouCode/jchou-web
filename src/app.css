@@ -2,14 +2,22 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --primary-color: black;
+  --secondary-color: #979797;
+  --bg-color: #fff;
+}
+
+
+
 body {
   font-family: 'Graphik', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
   font-size: 16px;
+  color: var(--primary-color);
   margin: 0;
   padding: 0;
-  /* overflow: scroll; */
 }
 
 .post {
@@ -44,14 +52,31 @@ body {
   width: 1.5em;
 }
 
+.container-footer {
+  position: absolute;
+  color: gray;
+  display: flex;
+  width: 18.6em;
+  bottom: 3em;
+  justify-content: space-between;
+
+}
 
 .container {
   width: 80%;
+  height: 100%;
+  min-height: 80vh;
   margin: auto;
   padding-top: 5em;
+  padding-bottom: 2em;
   font-weight: 300;
   line-height: 1.7em;
 
+}
+
+.container h4 {
+  font-weight: 300;
+  margin-bottom: -0.1em;
 }
 
 .container p {
@@ -99,6 +124,8 @@ a p span {
   width: 80%;
   margin: auto;
   text-align: center;
+  padding-top: 7em;
+  padding-bottom: 2em;
 }
 
 .index h1 {
@@ -120,7 +147,6 @@ a p span {
   width: 320px;
   height: 239px;
   margin: auto;
-  margin-top: 7em;
   display: block;
 }
 
@@ -169,6 +195,10 @@ nav a {
 }
 
 nav a:hover {
+  color: black;
+}
+
+nav a:active {
   color: black;
 }
 
@@ -313,9 +343,7 @@ img {
     display: none;
   }
 
-  .index {
-    height: 2vh;
-  }
+  .index {}
 
   .index img {
     width: 219px;

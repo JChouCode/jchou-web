@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, Router } from 'components/Router'
 import { useRouteData } from "react-static"
+import { Footer } from 'components/Footer'
 
 const ReactMarkdown = require("react-markdown");
 
@@ -23,6 +24,7 @@ export default () => {
             </div>
           </Link>
         ))}
+      {/* <Footer /> */}
     </div>
   );
 }

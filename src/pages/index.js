@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Router } from 'components/Router'
+import GitHubButton from 'react-github-btn'
 // import { ScrollToTopController } from 'components/scroll'
 
 export default () => (
@@ -48,9 +49,10 @@ export default () => (
       </div>
     </div>
     <div className="footer">
+      <GitHubButton href="https://github.com/jchoucode/jchou-web" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jchoucode/jchou-web on GitHub">Star</GitHubButton>
       <p>Artwork by @Somosgalitos</p>
       <a href="https://github.com">Download Resume</a>
-      <p>Copyright @ Jeffrey Chou</p>
+      <p>Copyright © Jeffrey Chou</p>
     </div>
   </div>
 

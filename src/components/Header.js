@@ -1,8 +1,26 @@
 import React from "react"
 import { useSiteData } from "react-static"
 import { Link, Router } from 'components/Router'
+import GitHubButton from 'react-github-btn'
 // import logo from "./../assets/dog-static.png"
 // import "./css/header.css"
+
+
+const GRAPHCMS_endpoint = "https://api-uswest.graphcms.com/v1/cjyt00rv801nc01e3fhxy6izr/master";
+
+const query =
+  `{
+  posts{
+    id
+    title
+    image {
+      handle
+    }
+    content
+  }
+}`;
+
+
 
 export default () => {
   return (
@@ -18,7 +36,7 @@ export default () => {
         <Link to="/contact">Contact</Link>
       </nav>
       <div id="nav-right">
-        <a id="git" href="https://github.com">
+       <a id="git" href="https://github.com/JChouCode">
           <svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
             <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Toolbar/Dark" transform="translate(-46.000000, -2.000000)" fillRule="nonzero" stroke="#000000">
@@ -29,7 +47,7 @@ export default () => {
             </g>
           </svg>
         </a>
-        <a id="linked" href="linkedin.com">
+        <a id="linked" href="https://www.linkedin.com/in/jeffreychoucu/">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" space="preserve">
 <g transform="translate(1)">
