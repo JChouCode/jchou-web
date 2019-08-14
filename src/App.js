@@ -4,6 +4,7 @@ import { Root, Routes, addPrefetchExcludes } from 'react-static'
 import { Router, Match } from '@reach/router'
 import Dynamic from 'containers/Dynamic'
 import Header from 'components/Header'
+import { Helmet } from 'react-helmet'
 import './app.css'
 import { ScrollToTop } from "components/ScrollToTop"
 
@@ -13,6 +14,14 @@ addPrefetchExcludes(['dynamic'])
 function App() {
   return (
     <Root>
+      <Helmet>
+        <meta charSet="utf-8"></meta>
+        <title>Jeffrey Chou</title>
+        <meta name="description" content="Hi, I’m a student at Cornell University studying Computer Science and Physics.
+        My interests include software/fullstack dev, and data science.
+        Built with React & GraphQL"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      </Helmet>
       <Header></Header>
       <div className="content">
         <React.Suspense fallback={<em>Loading...</em>}>
