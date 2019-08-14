@@ -20,7 +20,6 @@ function App() {
         <meta name="description" content="Hi, I’m a student at Cornell University studying Computer Science and Physics.
         My interests include software/fullstack dev, and data science.
         Built with React & GraphQL"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Helmet>
       <Header></Header>
       <div className="content">
