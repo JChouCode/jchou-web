@@ -27,7 +27,7 @@ export default () => {
     <div className="header-wrapper">
       <Link to="/"className="logo">
         <img alt="dog" src={require("./../assets/dog-small.png")}></img>
-        <h1>Jeffrey<br></br>Chou</h1>
+        <div>Jeffrey<br></br>Chou</div>
       </Link>
       <nav id="navbar">
         <Link to="/about">About</Link>

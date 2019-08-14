@@ -215,8 +215,9 @@ nav a:active {
   height: 69px;
 }
 
-.logo h1 {
-  margin-left: -1px;
+.logo div {
+  margin-left: -2px;
+  font-weight: bold;
   font-size: 18px;
   line-height: 1em;
 }

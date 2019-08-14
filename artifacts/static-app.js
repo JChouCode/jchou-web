@@ -819,9 +819,6 @@ function App() {
   }), external_react_default.a.createElement("title", null, "Jeffrey Chou"), external_react_default.a.createElement("meta", {
     name: "description",
     content: "Hi, I\u2019m a student at Cornell University studying Computer Science and Physics. My interests include software/fullstack dev, and data science. Built with React & GraphQL"
-  }), external_react_default.a.createElement("meta", {
-    name: "viewport",
-    content: "width=device-width, initial-scale=1"
   })), external_react_default.a.createElement(Header, null), external_react_default.a.createElement("div", {
     className: "content"
   }, external_react_default.a.createElement(external_react_default.a.Suspense, {
